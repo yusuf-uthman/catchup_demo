@@ -1,0 +1,21 @@
+catchup_demo:
+  outputs:
+    dev:
+      type: postgres
+      threads: 3
+      host: "{{ env_var('HEROKU_DEMO_PG_HOST') }}"
+      port: 5432
+      user: "{{ env_var('HEROKU_DEMO_PG_USER') }}"
+      pass: "{{ env_var('HEROKU_DEMO_PG_PASS') }}"
+      dbname: "{{ env_var('HEROKU_DEMO_PG_DB') }}"
+      schema: catchup_demo_dev
+    prod:
+      type: postgres
+      threads: 3
+      host: "{{ env_var('HEROKU_DEMO_PG_HOST') }}"
+      port: 5432
+      user: "{{ env_var('HEROKU_DEMO_PG_USER') }}"
+      pass: "{{ env_var('HEROKU_DEMO_PG_PASS') }}"
+      dbname: "{{ env_var('HEROKU_DEMO_PG_DB') }}"
+      schema: catchup_demo_prod
+  target: dev
