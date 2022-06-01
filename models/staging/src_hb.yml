@@ -1,4 +1,5 @@
 version: 2
+
 sources:
     - name: staging_hb
       database: de4jsjsel5i78g
